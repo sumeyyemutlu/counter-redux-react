@@ -10,7 +10,7 @@ const counterReducer = (state=0, action) =>{//state tanımsız olmaması için i
         case actionTypes.INCREASE_BY_TWO_COUNTER:
             return (newState = state + action.payload);
         default:
-            return state; //aranan action bulunamazsa varsayılan statei döndür.
+            return state; //aranan action bulunamazsa varsayılan statei döndür. state = 0
     }
 }
 export default counterReducer;

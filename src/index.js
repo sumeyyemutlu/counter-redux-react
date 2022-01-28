@@ -10,7 +10,8 @@ const store = configureStore();//store'dan bir obje oluşturduk.
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider> <App /></Provider> {// Provider, store'un tüm uygulamaya etki etmesini sağlamaya yarayan bir kapsayıcı
+    <Provider store={store}> <App /></Provider> {// Provider, store'un tüm uygulamaya etki etmesini sağlamaya yarayan bir kapsayıcı
+    //ne için kapsıyoruz? store'daki state'ler için o yüzden kapsayıcının amacını da store ={store} diyerek yazıyoruz.
     }
   </React.StrictMode>,
   document.getElementById('root')
