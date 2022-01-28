@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes'
 
 const counterReducer = (state=0, action) =>{//state tanımsız olmaması için ilk değerini verdik
-    let newState ;//arrayin bir kopyasını, referansını oluşturduk onun üstünde işlem yapacağız
+    let newState ;//arrayin bir kopyasını, referansını oluşturduk onun üstünde işlemn
     switch(action.type) {
         case actionTypes.INCREASE_COUNTER:
             return (newState = state + action.payload);
