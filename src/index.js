@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './redux/reducers/configureStore';
+import {Provider} from 'react-redux';
+
+const store = configureStore();//store'dan bir obje oluşturduk.
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider> <App /></Provider> {// Provider, store'un tüm uygulamaya etki etmesini sağlamaya yarayan bir kapsayıcı
+    }
   </React.StrictMode>,
   document.getElementById('root')
 );
